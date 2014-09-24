@@ -1,13 +1,11 @@
 package:
   name: trilinos
-  version: 11.2.4
+  version: 11.10.2
 
 source:
-  fn: trilinos-11.2.4-Source.tar.gz
-  url: http://trilinos.sandia.gov/download/files/trilinos-11.2.4-Source.tar.gz
-  md5: 29abd4c5bd4bb39aef87e151bfe12541
-  patches:
-    - version.patch
+  fn: trilinos-11.10.2-Source.tar.bz2
+  url: http://trilinos.sandia.gov/download/files/trilinos-11.10.2-Source.tar.bz2
+  md5: c8dd5012890140b1a98c704c111cddaa
 
 requirements:
   build:
