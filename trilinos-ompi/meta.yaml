@@ -1,0 +1,25 @@
+package:
+  name: trilinos-ompi
+  version: 11.10.2
+
+source:
+  fn: trilinos-11.10.2-Source.tar.bz2
+  url: http://trilinos.sandia.gov/download/files/trilinos-11.10.2-Source.tar.bz2
+  md5: c8dd5012890140b1a98c704c111cddaa
+
+requirements:
+  build:
+    - python
+    - numpy
+    - swig 2.0.8
+    - cmake
+    - openmpi
+  run:
+    - python
+    - numpy
+    - openmpi
+
+test:
+  imports:
+    - PyTrilinos
+    - PyTrilinos._Teuchos
