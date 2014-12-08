@@ -7,6 +7,54 @@ source:
   url: http://www.open-mpi.org/software/ompi/v1.6/downloads/openmpi-1.6.3.tar.bz2
   md5: eedb73155a7a40b0b07718494298fb25
 
+build:
+  detect_binary_files_with_prefix: true
+
+  binary_has_prefix_files:
+    - lib/libmpi.1.dylib
+    - lib/libmpi.dylib
+    - lib/libopen-pal.4.dylib
+    - lib/libopen-pal.dylib
+    - lib/libopen-rte.4.dylib
+    - lib/libopen-rte.dylib
+    - lib/libvt-hyb.0.dylib
+    - lib/libvt-hyb.a
+    - lib/libvt-hyb.dylib
+    - lib/libvt-mpi-unify.0.dylib
+    - lib/libvt-mpi-unify.a
+    - lib/libvt-mpi-unify.dylib
+    - lib/libvt-mpi.0.dylib
+    - lib/libvt-mpi.a
+    - lib/libvt-mpi.dylib
+    - lib/libvt-mt.0.dylib
+    - lib/libvt-mt.a
+    - lib/libvt-mt.dylib
+    - lib/libvt.0.dylib
+    - lib/libvt.a
+    - lib/libvt.dylib
+    - python.app/Contents/lib/libmpi.1.dylib
+    - python.app/Contents/lib/libmpi.dylib
+    - python.app/Contents/lib/libopen-pal.4.dylib
+    - python.app/Contents/lib/libopen-pal.dylib
+    - python.app/Contents/lib/libopen-rte.4.dylib
+    - python.app/Contents/lib/libopen-rte.dylib
+    - python.app/Contents/lib/libvt-hyb.0.dylib
+    - python.app/Contents/lib/libvt-hyb.a
+    - python.app/Contents/lib/libvt-hyb.dylib
+    - python.app/Contents/lib/libvt-mpi-unify.0.dylib
+    - python.app/Contents/lib/libvt-mpi-unify.a
+    - python.app/Contents/lib/libvt-mpi-unify.dylib
+    - python.app/Contents/lib/libvt-mpi.0.dylib
+    - python.app/Contents/lib/libvt-mpi.a
+    - python.app/Contents/lib/libvt-mpi.dylib
+    - python.app/Contents/lib/libvt-mt.0.dylib
+    - python.app/Contents/lib/libvt-mt.a
+    - python.app/Contents/lib/libvt-mt.dylib
+    - python.app/Contents/lib/libvt.0.dylib
+    - python.app/Contents/lib/libvt.a
+    - python.app/Contents/lib/libvt.dylib
+
+
 about:
   home: http://www.open-mpi.org/
   license: new BSD  (http://www.open-mpi.org/community/license.php)
