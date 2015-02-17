@@ -11,8 +11,10 @@ build:
 
 requirements:
   build:
+    - debug
     - python
   run:
+    - debug
     - python
 
 test:
