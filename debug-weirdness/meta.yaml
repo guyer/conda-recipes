@@ -1,0 +1,19 @@
+package:
+  name: weirdness
+  version: 1.2.3
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+
+test:
+  commands:
+    - weirdness
+
+about:
+  license: BSD
