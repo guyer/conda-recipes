@@ -18,6 +18,8 @@ requirements:
     - python
 
 test:
+  requires:
+    - debug
   commands:
     - weirdness
 
