@@ -8,9 +8,9 @@ source:
   md5: eedb73155a7a40b0b07718494298fb25
 
 build:
-  number: 3
-
-#  detect_binary_files_with_prefix: true
+  number: 4
+  binary_relocation: true
+  detect_binary_files_with_prefix: true
 
 about:
   home: http://www.open-mpi.org/
