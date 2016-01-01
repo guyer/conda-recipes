@@ -13,11 +13,14 @@ requirements:
     - numpy
     - swig 2.0.8
     - cmake
+    - openmpi
   run:
     - python
     - numpy
+    - openmpi
 
 test:
   imports:
     - PyTrilinos
     - PyTrilinos._Teuchos
+    - PyTrilinos.ML
