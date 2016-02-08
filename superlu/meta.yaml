@@ -1,0 +1,20 @@
+package:
+  name: superlu
+  version: 4.3
+
+source:
+  fn: superlu_4.3.tar.gz
+  url: http://crd-legacy.lbl.gov/~xiaoye/SuperLU/superlu_4.3.tar.gz
+
+requirements:
+  build:
+
+  run:
+
+build:
+
+test:
+
+about:
+  home: http://crd-legacy.lbl.gov/~xiaoye/SuperLU/
+  license: BSD 2-Clause
