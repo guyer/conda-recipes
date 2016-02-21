@@ -7,17 +7,25 @@ source:
   url: https://trilinos.org/oldsite/download/files/trilinos-11.10.2-Source.tar.bz2
   md5: c8dd5012890140b1a98c704c111cddaa
 
+build:
+  number:
+   2
+
 requirements:
   build:
     - python
     - numpy x.x
+    - nomkl
     - swig 2.0.8
     - cmake
     - openmpi
+    - openblas
   run:
     - python
     - numpy x.x
+    - nomkl
     - openmpi
+    - openblas
 
 test:
   imports:
