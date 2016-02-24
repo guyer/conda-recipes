@@ -39,6 +39,9 @@ cmake \
     -D PYTHON_LIBRARY:FILEPATH=$PREFIX/lib/libpython${PY_VER}.${SO_EXT} \
     -D PyTrilinos_INSTALL_PREFIX:PATH=$PREFIX \
     -D BLAS_LIBRARY_DIRS=${PREFIX}/lib \
+    -D BLAS_LIBRARY_NAMES="libopenblas.so" \
+    -D LAPACK_LIBRARY_DIRS=${PREFIX}/lib \
+    -D LAPACK_LIBRARY_NAMES="libopenblas.so" \
     ..
 
 make -j $CPU_COUNT
