@@ -1,11 +1,5 @@
 #!/bin/bash
 
-if [ `uname` == Darwin ]; then
-    SO_EXT='dylib'
-else
-    SO_EXT='so'
-fi
-
 mkdir build
 cd build
 
@@ -13,7 +7,7 @@ cd build
 
 #     -D PYTHON_EXECUTABLE:FILEPATH=$PREFIX/bin/python${PY_VER} \
 #     -D PYTHON_INCLUDE_PATH:PATH=$PREFIX/include/python${PY_VER} \
-#     -D PYTHON_LIBRARY:FILEPATH=$PREFIX/lib/libpython${PY_VER}.${SO_EXT} \
+#     -D PYTHON_LIBRARY:FILEPATH=$PREFIX/lib/libpython${PY_VER}${SHLIB_EXT} \
 
 
 env LDFLAGS="-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/ $LDFLAGS" \
@@ -29,14 +23,18 @@ cmake \
     -D Trilinos_ENABLE_EpetraExt:BOOL=ON \
     -D Trilinos_ENABLE_AztecOO:BOOL=ON \
     -D Trilinos_ENABLE_ML:BOOL=ON \
+    -D Trilinos_ENABLE_STK:BOOL=OFF \
     -D TPL_ENABLE_MPI:BOOL=ON \
+    -D TPL_ENABLE_Boost=OFF \
+    -D TPL_ENABLE_BoostLib=OFF \
+    -D TPL_ENABLE_Netcdf=OFF \
     -D MPI_BASE_DIR:PATH=${PREFIX} \
     -D BUILD_SHARED_LIBS:BOOL=ON \
     -D SWIG_EXECUTABLE:FILEPATH=$PREFIX/bin/swig \
     -D CMAKE_INSTALL_PREFIX=$PREFIX \
     -D PYTHON_EXECUTABLE:FILEPATH=$PREFIX/bin/python${PY_VER} \
     -D PYTHON_INCLUDE_PATH:PATH=$PREFIX/include/python${PY_VER} \
-    -D PYTHON_LIBRARY:FILEPATH=$PREFIX/lib/libpython${PY_VER}.${SO_EXT} \
+    -D PYTHON_LIBRARY:FILEPATH=$PREFIX/lib/libpython${PY_VER}${SHLIB_EXT} \
     -D PyTrilinos_INSTALL_PREFIX:PATH=$PREFIX \
     -D BLAS_LIBRARY_DIRS=${PREFIX}/lib \
     -D BLAS_LIBRARY_NAMES="openblas;libgfortran.so.1" \
