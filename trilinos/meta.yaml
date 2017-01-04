@@ -16,7 +16,7 @@ requirements:
     - python
     - numpy x.x
     - nomkl
-    - swig >=3.0.0
+    - swig ==3.0.2
     - cmake
     - mpich
     - openblas
