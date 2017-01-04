@@ -16,6 +16,7 @@ cmake \
     -D Trilinos_ENABLE_EpetraExt:BOOL=ON \
     -D Trilinos_ENABLE_AztecOO:BOOL=ON \
     -D Trilinos_ENABLE_ML:BOOL=ON \
+    -D Trilinos_ENABLE_STK:BOOL=OFF \
     -D TPL_ENABLE_MPI:BOOL=ON \
     -D TPL_ENABLE_Netcdf=OFF \
     -D MPI_BASE_DIR:PATH=${PREFIX} \
