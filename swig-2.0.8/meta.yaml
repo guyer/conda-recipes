@@ -6,6 +6,12 @@ source:
   fn: swig-2.0.8.tar.gz
   url: http://prdownloads.sourceforge.net/swig/swig-2.0.8.tar.gz
 
+build:
+  number: 0
+  binary_relocation: true
+  detect_binary_files_with_prefix: true
+
+
 requirements:
   build:
     - pcre
