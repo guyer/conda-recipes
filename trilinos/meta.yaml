@@ -14,7 +14,7 @@ build:
 requirements:
   build:
     - python
-    - numpy x.x
+    - numpy {{ numpy }}
     - nomkl
     - swig ==3.0.10
     - cmake
@@ -23,7 +23,7 @@ requirements:
     - boost
   run:
     - python
-    - numpy x.x
+    - numpy {{ numpy }}
     - nomkl
     - mpich
     - openblas
