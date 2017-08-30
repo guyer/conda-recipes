@@ -10,7 +10,6 @@ cmake \
     -D DART_TESTING_TIMEOUT:STRING=600 \
     -D Trilinos_ENABLE_Fortran:BOOL=OFF \
     -D Trilinos_ENABLE_TESTS:BOOL=ON \
-    -D Trilinos_ENABLE_ALL_OPTIONAL_PACKAGES:BOOL=ON \
     -D Trilinos_ENABLE_PyTrilinos:BOOL=ON \
     -D Trilinos_ENABLE_Epetra:BOOL=ON \
     -D Trilinos_ENABLE_EpetraExt:BOOL=ON \
