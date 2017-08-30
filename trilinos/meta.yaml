@@ -23,7 +23,7 @@ requirements:
     - boost
   run:
     - python
-    - numpy {{ numpy }}
+    - {{ pin_compatible('numpy', max_pin=None) }}
     - nomkl
     - mpich
     - openblas
