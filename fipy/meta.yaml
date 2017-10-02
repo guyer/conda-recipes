@@ -12,26 +12,29 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 4
+  noarch: generic
   script: 
-    python setup.py install
+    - 2to3 --write .  # [py3k]
+    - python setup.py install
 
 requirements:
   build:
     - python
     - setuptools
     - numpy
+    - scipy
 
   run:
     - python
     - numpy
     - scipy
     - gmsh        # [not win]
-    - pysparse    # [not win]
-    - trilinos    # [not win]
-    - mpi4py      # [not win]
+    - pysparse    # [not win and not py3k]
+    - trilinos    # [not win and not py3k]
+    - mpi4py      # [not win and not py3k]
     - matplotlib
-    - mayavi
+    - mayavi      # [not py3k]
     - nomkl
 
 test:
