@@ -13,7 +13,6 @@ source:
 
 build:
   number: 4
-  noarch: generic
   script: 
     - 2to3 --write .  # [py3k]
     - python setup.py install
